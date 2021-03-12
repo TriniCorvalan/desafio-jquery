@@ -1,7 +1,7 @@
-$(document).ready(function(){
+$(document).on('turbolinks:load', function() {
 
-  $('.close').click(function(){
-    $('#alert').hide();
+  $('.close').on('click', function() {
+    $('#alert').fadeOut('slow');
   });
   
 });
