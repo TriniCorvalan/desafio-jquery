@@ -1,7 +1,7 @@
-$(document).ready(function(){
+$(document).on('turbolinks:load', function() {
 
-  $('.btn').click(function(){
-    $('.card').fadeToggle('slow');
+  $('.btn').on('click', function() {
+    $('.card').slideToggle('slow');
   });
   
 });

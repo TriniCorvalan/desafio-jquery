@@ -1,7 +1,15 @@
-$(document).ready(function(){
+$(document).on('turbolinks:load', function() {
+  $('.collapse').hide();
+  $('.collapse.show').show();
 
-  $('.btn').click(function(){
-    $('.card').fadeToggle('slow');
+  $('.btn').on('click', function () {
+    var div = $($(this).data('target'));
+
+    if (div.is('visible')) {
+      div.slideUp('fast');
+    } else {
+      $('.collapse').slideUp('fast');
+      div.slideDown('fast');
+    }
   });
-  
 });
